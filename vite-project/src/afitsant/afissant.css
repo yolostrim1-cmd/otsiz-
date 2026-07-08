@@ -1,0 +1,90 @@
+.sahifa {
+  padding: 30px;
+  color: white;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  min-height: 100vh;
+}
+
+.sarlavha {
+  text-align: center;
+  color: #38bdf8;
+  margin-bottom: 30px;
+}
+
+.forma {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.forma input,
+.forma select {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  width: 220px;
+}
+
+.forma button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #38bdf8;
+  color: white;
+  cursor: pointer;
+}
+
+.taom-qoshish {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.taom-qoshish input {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  width: 220px;
+}
+
+.taom-qoshish button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #10b981;
+  color: white;
+  cursor: pointer;
+}
+
+.kartalar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  gap: 20px;
+}
+
+.karta {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 20px;
+  border: 2px solid #38bdf8;
+}
+
+.yashil {
+  color: lime;
+  margin-left: 10px;
+}
+
+.sariq {
+  color: orange;
+  margin-left: 10px;
+}
+
+.kok {
+  color: #38bdf8;
+  margin-left: 10px;
+  font-weight: bold;
+}

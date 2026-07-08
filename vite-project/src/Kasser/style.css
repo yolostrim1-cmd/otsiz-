@@ -1,0 +1,675 @@
+:root {
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #fff;
+  --border: #e5e4e7;
+  --accent: #aa3bff;
+  --accent-bg: rgba(170, 59, 255, 0.1);
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding: 24px;
+  background: #f5f7fb;
+  color: var(--text);
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  background: #d7263d;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1.05;
+  color: var(--text-h);
+}
+
+main {
+  display: grid;
+  gap: 24px;
+}
+
+.tables-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.table-card,
+.summary-card,
+.calculator-card {
+  background: #fff;
+  border: 1px solid #e6e8ed;
+  border-radius: 22px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.06);
+  padding: 24px;
+}
+
+.table-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.clear-button {
+  background: #d7263d;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.clear-button:hover,
+.menu-button:hover,
+.calc-button:hover,
+.calc-clear:hover {
+  transform: translateY(-1px);
+}
+
+.menu-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.menu-button {
+  background: #f0f4fb;
+  color: #111827;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  min-width: 96px;
+  border: none;
+  cursor: pointer;
+}
+
+.orders-list {
+  min-height: 88px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.empty-order {
+  margin: 0;
+  color: #667085;
+  font-size: 15px;
+}
+
+.order-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: #f9fbff;
+  font-size: 15px;
+  color: #1f2937;
+}
+
+.table-total {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.summary-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.summary-card h2 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+
+.summary-value {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.calculator-header h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.calculator {
+  display: grid;
+  gap: 18px;
+}
+
+.calc-screen {
+  min-height: 60px;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: #f2f5fb;
+  font-size: 28px;
+  font-weight: 700;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  word-break: break-all;
+}
+
+.calc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.calc-button {
+  background: #eff4ff;
+  color: #111827;
+  padding: 18px 0;
+  border-radius: 14px;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.calc-button.equals {
+  background: #d7263d;
+  color: #fff;
+}
+
+.calc-clear {
+  background: #d7263d;
+  color: #fff;
+  padding: 16px 0;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .tables-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .app-shell {
+    padding: 18px;
+  }
+
+  .menu-buttons {
+    justify-content: center;
+  }
+
+  .calculator-card,
+  .summary-card,
+  .table-card {
+    padding: 20px;
+  }
+}
+
+.pay-action-button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #d1fae5;
+  color: #065f46;
+}
+.pay-action-button:hover {
+  background-color: #a7f3d0;
+}
+ 
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+ 
+/* Modal box */
+.modal-box {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  padding: 1.5rem;
+  width: 340px;
+  max-width: 92%;
+}
+ 
+.modal-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 1rem;
+}
+ 
+/* Buyurtmalar ro'yxati */
+.modal-orders {
+  margin-bottom: 4px;
+}
+.modal-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  padding: 5px 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+ 
+/* Jami summa */
+.modal-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 12px 0;
+  padding: 10px;
+  background: #f9fafb;
+  border-radius: 8px;
+}
+ 
+/* To'lov turi */
+.modal-pay-label {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0 0 8px;
+}
+.modal-pay-methods {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+.modal-pay-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  font-size: 13px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #f9fafb;
+  color: #111827;
+}
+.modal-pay-btn:hover {
+  background: #f3f4f6;
+}
+.modal-pay-btn--active {
+  background: #eff6ff;
+  border-color: #93c5fd;
+  color: #1d4ed8;
+  font-weight: 500;
+}
+ 
+/* Tasdiqlash tugmasi */
+.modal-confirm-btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #d1fae5;
+  color: #065f46;
+}
+.modal-confirm-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.modal-confirm-btn:not(:disabled):hover {
+  background-color: #a7f3d0;
+}
+ 
+/* Bekor qilish */
+.modal-close-btn {
+  width: 100%;
+  margin-top: 8px;
+  padding: 8px;
+  font-size: 13px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  cursor: pointer;
+  background: none;
+  color: #6b7280;
+}
+.modal-close-btn:hover {
+  background: #f9fafb;
+}
+ 
+/* To'lov tasdiqlandi ekrani */
+.modal-confirmed {
+  text-align: center;
+  padding: 0.5rem 0 1rem;
+}
+.modal-check {
+  font-size: 52px;
+  color: #059669;
+}
+.modal-confirmed h2 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 12px 0 4px;
+}
+.modal-confirmed p {
+  font-size: 14px;
+  color: #6b7280;
+  .kasser .app-shell {
+    min-height: 100vh;
+    padding: 24px;
+    background: #f5f7fb;
+    color: var(--text);
+  }
+  .kasser .app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+  .kasser .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    background: #d7263d;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  .kasser main {
+    display: grid;
+    gap: 24px;
+  }
+  .kasser .tables-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+  .kasser .table-card,
+  .kasser .summary-card,
+  .kasser .calculator-card {
+    background: #fff;
+    border: 1px solid #e6e8ed;
+    border-radius: 22px;
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.06);
+    padding: 24px;
+  }
+  .kasser .table-card {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .kasser .clear-button {
+    background: #d7263d;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+  }
+  .kasser .menu-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .kasser .menu-button {
+    background: #f0f4fb;
+    color: #111827;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 14px;
+    min-width: 96px;
+    border: none;
+    cursor: pointer;
+  }
+  .kasser .orders-list {
+    min-height: 88px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .kasser .empty-order {
+    margin: 0;
+    color: #667085;
+    font-size: 15px;
+  }
+  .kasser .order-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 10px 14px;
+    border-radius: 14px;
+    background: #f9fbff;
+    font-size: 15px;
+    color: #1f2937;
+  }
+  .kasser .table-total {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: #0f172a;
+  }
+  .kasser .summary-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+  .kasser .summary-card h2 {
+    margin: 0;
+    font-size: 30px;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+  }
+  .kasser .summary-value {
+    margin: 0;
+    font-size: 36px;
+    font-weight: 800;
+    color: #0f172a;
+  }
+  .kasser .calculator-header h2 {
+    margin: 0;
+    font-size: 22px;
+  }
+  .kasser .calculator {
+    display: grid;
+    gap: 18px;
+  }
+  .kasser .calc-screen {
+    min-height: 60px;
+    padding: 18px 20px;
+    border-radius: 18px;
+    background: #f2f5fb;
+    font-size: 28px;
+    font-weight: 700;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    word-break: break-all;
+  }
+  .kasser .calc-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .kasser .calc-button {
+    background: #eff4ff;
+    color: #111827;
+    padding: 18px 0;
+    border-radius: 14px;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+  }
+  .kasser .calc-button.equals {
+    background: #d7263d;
+    color: #fff;
+  }
+  .kasser .calc-clear {
+    background: #d7263d;
+    color: #fff;
+    padding: 16px 0;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+  }
+  .kasser .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+  }
+  .kasser .modal-box {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    padding: 1.5rem;
+    width: 340px;
+    max-width: 92%;
+  }
+  .kasser .modal-title {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 0 1rem;
+  }
+  .kasser .modal-orders {
+    margin-bottom: 4px;
+  }
+  .kasser .modal-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    padding: 5px 0;
+    border-bottom: 1px solid #f3f4f6;
+  }
+  .kasser .modal-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 12px 0;
+    padding: 10px;
+    background: #f9fafb;
+    border-radius: 8px;
+  }
+  .kasser .modal-pay-label {
+    font-size: 13px;
+    color: #6b7280;
+    margin: 0 0 8px;
+  }
+  .kasser .modal-pay-methods {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-bottom: 1rem;
+  }
+  .kasser .modal-pay-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    font-size: 13px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #f9fafb;
+    color: #111827;
+  }
+  .kasser .modal-confirm-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #d1fae5;
+    color: #065f46;
+  }
+  .kasser .modal-close-btn {
+    width: 100%;
+    margin-top: 8px;
+    padding: 8px;
+    font-size: 13px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    cursor: pointer;
+    background: none;
+    color: #6b7280;
+  }
+  .kasser .modal-confirmed {
+    text-align: center;
+    padding: 0.5rem 0 1rem;
+  }
+  .kasser .modal-check {
+    font-size: 52px;
+    color: #059669;
+  }
+  .kasser .modal-confirmed h2 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 12px 0 4px;
+  }
+  .kasser .modal-confirmed p {
+    font-size: 14px;
+    color: #6b7280;
+    margin-top: 8px;
+  }
+  margin-top: 8px;
+}
+ 
